@@ -1,0 +1,22 @@
+{
+    "mode": "All",
+    "policyRule": {
+        "if": {
+            "allOf": [
+                {
+                    "field": "type",
+                    "in": [
+                        "Microsoft.DevTestLab/schedules"
+                    ]
+                },
+                {
+                    "field": "Microsoft.DevTestLab/schedules/status",
+                    "equals": "Disabled"
+                }
+            ]
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+}
